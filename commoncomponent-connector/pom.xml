@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.umgi.es.devkit</groupId>
+    <artifactId>commoncomponent-connector</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>mule-module</packaging>
+    <name>Mule CommonComponent Anypoint Connector</name>
+    <parent>
+        <groupId>org.mule.tools.devkit</groupId>
+        <artifactId>mule-devkit-parent</artifactId>
+        <version>3.5.1</version>
+    </parent>
+    <properties>
+        <testdata.plugin.version>1.1.5</testdata.plugin.version>
+        <junit.version>4.9</junit.version>
+        <mockito.version>1.8.2</mockito.version>
+        <jersey.version>1.16</jersey.version>
+        <gson.version>2.2.2</gson.version>
+        <jdk.version>1.6</jdk.version>
+        <category>Community</category>
+        <licensePath>LICENSE.md</licensePath>
+        <devkit.studio.package.skip>false</devkit.studio.package.skip>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>eclipse</groupId>
+            <artifactId>eclipse-runtime</artifactId>
+            <version>2.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+    <groupId>org.mule.modules</groupId>
+    <artifactId>mule-module-apikit</artifactId>
+    <version>${project.version}</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.mule</groupId>
+            <artifactId>mule-core</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.mule.transports</groupId>
+            <artifactId>mule-transport-http</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-module-json</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>javax.mail</groupId>
+            <artifactId>mailapi</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+        <id>mule-ee-releases</id>
+        <name>Mule EE Releases Repository</name>
+        <url>http://dev.ee.mulesource.com/repository/content/repositories/releases/</url>
+    </repository>
+    <repository>
+        <id>mule-ee-snapshots</id>
+        <name>Mule EE Snapshots Repository</name>
+        <url>http://dev.ee.mulesource.com/repository/content/repositories/snapshots/</url>
+    </repository>
+    </repositories>
+    
+<pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-release</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+  </pluginRepositories>
+    <scm>
+        <connection>scm:git:git://github.com:raodss/commoncomponent.git</connection>
+        <developerConnection>scm:git:git@github.com:raodss/commoncomponent-module.git</developerConnection>
+        <url>http://github.com/raodss/commoncomponent</url>
+    </scm>
+</project>

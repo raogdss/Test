@@ -1,0 +1,11 @@
+<!-- BEGIN_INCLUDE(commoncomponent:myProcessor) -->
+ <commoncomponent:my-processor content="#[map-payload:content]" />       
+<!-- END_INCLUDE(commoncomponent:myProcessor) -->
+ 
+<!-- BEGIN_INCLUDE(commoncomponent:putInBarn) -->
+    <commoncomponent:put-in-barn animal="#[map-payload:animal]" />
+<!-- END_INCLUDE(commoncomponent:putInBarn) -->
+
+<!-- BEGIN_INCLUDE(commoncomponent:query) -->
+    <commoncomponent:query query="SELECT fieldName FROM MY_TABLE" />
+<!-- END_INCLUDE(commoncomponent:query) -->
